@@ -22,6 +22,29 @@
       };
     };
 
+  macros {
+    ZMK_MACRO(vim_write,
+      bindings = <&kp ESC &kp LS(SEMICOLON) &kp W &kp A &kp RETURN>;
+    )
+    ZMK_MACRO(vim_close,
+      bindings = <&kp ESC &kp LS(SEMICOLON) &kp Q &kp A &kp RETURN>;
+    )
+  };
+
+  combos {
+    compatible = "zmk,combos";
+    combo_vim_write {
+      timeout-ms = <50>;
+      key-positions = <30 31 32>;
+      bindings = <&vim_write>;
+    };
+    combo_vim_close {
+      timeout-ms = <50>;
+      key-positions = <41 42 43>;
+      bindings = <&vim_close>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
