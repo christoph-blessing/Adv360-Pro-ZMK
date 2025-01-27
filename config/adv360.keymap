@@ -35,7 +35,7 @@
     compatible = "zmk,combos";
     combo_minus {
       timeout-ms = <50>;
-      key-positions = <31 32>;
+      key-positions = <49 50>;
       bindings = <&kp MINUS>;
     };
     combo_underscore {
